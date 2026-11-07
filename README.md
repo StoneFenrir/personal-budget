@@ -1,6 +1,14 @@
 # personal-budget
 A repo to house the project of making a personal budget tool
 
+## tool components
+
+There are three sources of inputs for the tool:
+
+- Account transaction exports and their corresponding config files (planned to help map different account schema to this tool's schema)
+- Budget category and account goals for specific time periods
+- Simulation / planning configurations to allow time projection
+
 ## transaction schema
 
 Transactions have the following fields:
@@ -25,4 +33,4 @@ On a single day, a paycheck was split between the checking, savings, and retirem
 | 1970-01-01 | -$50.00  | Transfer | CC Payment       | Checking |
 | 1970-01-01 | +$50.00  | Transfer | CC Payment       | CC       |
 
-TODO: Would treating every transaction like a transfer and having from and to properties prevent the double listed transactions?
+TODO: Would treating every transaction like a transfer and having from and to properties prevent the double listed transactions? The problem is that the different accounts export transactions just from their perspective, so the import data would have the duplicate records of transactions.
